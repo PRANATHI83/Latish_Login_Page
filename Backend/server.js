@@ -176,6 +176,6 @@ app.get('/api/user', authenticateToken, async (req, res) => {
 // Serve uploaded images
 app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
-app.listen(3300, () => {
+app.listen(3043, () => {
     console.log('Server running on http://13.201.36.187:3043');
 });
