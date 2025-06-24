@@ -165,7 +165,7 @@ app.get('/api/user', authenticateToken, async (req, res) => {
         const user = result.rows[0];
         res.json({
             username: user.username,
-            profileImage: `http://13.201.36.187:3033${user.profile_image}`,
+            profileImage: `http://13.201.36.187:3043${user.profile_image}`,
         });
     } catch (error) {
         console.error('Error:', error);
@@ -177,5 +177,5 @@ app.get('/api/user', authenticateToken, async (req, res) => {
 app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
 app.listen(3300, () => {
-    console.log('Server running on http://13.201.36.187:3033');
+    console.log('Server running on http://13.201.36.187:3043');
 });
